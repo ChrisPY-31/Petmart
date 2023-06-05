@@ -1,20 +1,23 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const initialState = {
-    counter: 10
+interface FiltersReducer {
+    articulosFiltrados:string
+}
 
+const initialState:FiltersReducer = {
+    articulosFiltrados : ''
 }
 
 export const PetmartSlice = createSlice({
     name: 'Petmart',
     initialState,
     reducers: {
-        increment: (state, /* action */ ) => {
-            state.counter += 1;
-        },
+        getSearchItem : (state , action) =>{
+            state.articulosFiltrados = action.payload
+        }
     }
 });
 
 
 // Action creators are generated for each case reducer function
-export const { increment } = PetmartSlice.actions;
+export const { getSearchItem } = PetmartSlice.actions;

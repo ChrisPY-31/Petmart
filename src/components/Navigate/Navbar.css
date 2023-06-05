@@ -1,0 +1,6 @@
+.carrito , .cuenta{
+    width: 25px;
+    height: 25px;
+    font-weight: lighter;
+    cursor: pointer;
+}
