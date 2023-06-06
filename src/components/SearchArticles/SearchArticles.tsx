@@ -29,7 +29,7 @@ const SearchArticles = () => {
     }
   };
   return (
-    <form className="flex relative" onSubmit={handleSubmit} >
+    <form className="flex relative mx-10" onSubmit={handleSubmit} >
       <input
         type="text"
         className="py-2 px-2 w-96 rounded outline-none"

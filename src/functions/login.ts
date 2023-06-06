@@ -1,7 +1,7 @@
 import { signInWithEmailAndPassword } from "firebase/auth"
 import { FirebaseAuth } from "../firebase/credencials"
 
-const LoginUser = async( email:string , password:string & number) =>{
+const loginUser = async( email:string , password:string) =>{
     try {
         const UserLogin = await signInWithEmailAndPassword(FirebaseAuth , email , password)
         console.log(UserLogin)
@@ -10,4 +10,4 @@ const LoginUser = async( email:string , password:string & number) =>{
     }
     
 } 
-export default LoginUser
+export default loginUser
